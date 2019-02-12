@@ -1,23 +1,25 @@
 <!DOCTYPE html>
+
 {% load staticfiles %}
+
 <html>
+
     <head>
         <title>Rango</title>
     </head>
-    
-    <body>
-        <div>
-        {{boldmessage}}
-        </div>
-        
-        <div>
-        <img src="{% static "images/Tom.jpg" %}" 
-                alt="picture of Tom" />
-        </div>
-        
-        <div>
-            <img src = "{{MEDIA_URL}}cat.jpg" />
-        </div>
-    </body>
-</html>
 
+    <body>
+         <h1>Rango says...</h1>
+        <div>
+            here is the about page. <br />
+            <strong>{{ boldmessage }}</strong><br />
+        </div>
+        <div>
+        <a href="/">Index</a><br />
+            <img src="{% static 'images/Tom.jpg' %}" alt="Picture of Tom." />
+            <img src="{{ MEDIA_URL}}cat.jpg" alt="Picture of Cat." />
+        </div>
+
+    </body>
+
+</html>

@@ -1,25 +1,42 @@
-<!DOCTYPE html>
-
+{% extends 'rango/base.html' %}
 {% load staticfiles %}
+{% block title_block %}
+About
+{% endblock %}
 
-<html>
+{% block body_block %}
+<div>
+    <h1>Rango says...</h1>
+    here is the about page. <br/>
+    <strong>{{ boldmessage }}</strong><br/>
+</div>
+<img src="{% static 'images/Tom.jpg' %}" alt="Picture of Tom."/>
+<img src="{{ MEDIA_URL}}cat.jpg" alt="Picture of Cat."/>
+<hr>
+{% endblock %}
 
-    <head>
-        <title>Rango</title>
-    </head>
+<!--<!DOCTYPE html>-->
 
-    <body>
-         <h1>Rango says...</h1>
-        <div>
-            here is the about page. <br />
-            <strong>{{ boldmessage }}</strong><br />
-        </div>
-        <div>
-        <a href="/">Index</a><br />
-            <img src="{% static 'images/Tom.jpg' %}" alt="Picture of Tom." />
-            <img src="{{ MEDIA_URL}}cat.jpg" alt="Picture of Cat." />
-        </div>
+<!--{% load staticfiles %}-->
 
-    </body>
+<!--<html>-->
 
-</html>
+<!--<head>-->
+<!--<title>Rango</title>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<h1>Rango says...</h1>-->
+<!--<div>-->
+<!--here is the about page. <br />-->
+<!--<strong>{{ boldmessage }}</strong><br />-->
+<!--</div>-->
+<!--<div>-->
+<!--<a href="/">Index</a><br />-->
+<!--<img src="{% static 'images/Tom.jpg' %}" alt="Picture of Tom." />-->
+<!--<img src="{{ MEDIA_URL}}cat.jpg" alt="Picture of Cat." />-->
+<!--</div>-->
+
+<!--</body>-->
+
+<!--</html>-->
